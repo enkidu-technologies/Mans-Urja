@@ -1,9 +1,19 @@
 import React from 'react'
+import Hero from '../components/home/Hero'
+import '../styles/home.css'
+import OneStop from '../components/home/OneStop'
+import OurProducts from '../components/home/OurProducts'
+import OurServices from '../components/home/OurServices'
+import Stats from '../components/home/Stats'
 
 const Home = () => {
   return (
     <div>
-        <h1>Home</h1>
+      <Hero/>
+      <OneStop/>
+      <OurProducts/>
+      <OurServices/>
+      <Stats/>
     </div>
   )
 }

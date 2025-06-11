@@ -1,0 +1,33 @@
+
+
+.btn{
+    line-height: normal;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--light) !important;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn:hover{
+    background-color: var(--hover-color);
+    color: var(--light) !important;
+}
+
+a:hover{
+    color: var(--hover-color);
+}
+
+
+.desktop-hidden{
+    display: none;
+}
+@media (max-width: 600px) {
+    .mobile-hidden{
+        display: none;
+    }
+    .desktop-hidden{
+        display: block;
+    }
+}
