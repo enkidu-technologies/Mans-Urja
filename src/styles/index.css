@@ -18,67 +18,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-.header-desktop {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  /* background-color: #ffffff9a; */
-}
-.header-desktop a {
-  text-decoration: none;
-  color: var(--text-color);
-}
-.header-desktop a:hover {
-  color: var(--primary-color);
-}
-.logo {
-  color: var(--primary-color);
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 10px;
-}
-nav {
-  display: flex;
-  gap: 20px;
-}
 
-/* Home Page */
-.about-cards {
-  padding: 20px;
-  font-size: x-large;
-}
-.about-cards-up {
-  padding: 20px;
-  font-size: xx-large;
-}
-.about-cards-up .card {
-  color: var(--light);
-  text-align: center;
-  padding: 40px;
-  line-height: 2;
-  border-radius: 20px;
-}
-.about-cards-down {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-}
-.about-cards-down .card {
-  background-color: var(--hover-color);
-  color: var(--light);
-  padding: 40px;
-  line-height: 2;
-  border-radius: 20px;
-}
 
 @keyframes marquee {
   0% { transform: translateX(0); }
@@ -86,43 +26,7 @@ nav {
 }
 
 .animate-marquee {
-  animation: marquee 70s linear infinite;
+  animation: marquee 100s linear infinite;
 }
 
 
-footer {
-  border-top: 1px solid var(--light);
-  text-align: center;
-  padding: 10px;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  flex-wrap: wrap;
-  padding: 50px;
-  gap: 30px;
-}
-.footer-content .logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-}
-.footer-content ul {
-  list-style: none;
-  text-align: start;
-  padding: 10px;
-}
-.footer-content ul li {
-  margin: 5px 0;
-}
-
-footer a {
-  text-decoration: none;
-  color: var(--text-color);
-}
-footer a:hover {
-  color: var(--primary-color);
-}

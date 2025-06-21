@@ -28,7 +28,7 @@ const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, lo
 const ClientMarquee = () => {
     return (
         <div className="bg-gray-100 py-12">
-            <h2 className="text-3xl font-bold text-center text-gray-700 mb-8">Our Clients</h2>
+            <h2 className="text-3xl font-bold text-center text-gray-700 mb-8">Our Esteemed Clients</h2>
 
             <div className="overflow-hidden relative">
                 <div className="flex animate-marquee space-x-16 w-max">
