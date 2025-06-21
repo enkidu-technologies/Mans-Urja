@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from "../assets/logo.png"
+import logo from "../assets/imgs/logo.png"
 import { FaBars } from 'react-icons/fa';
 
 const Header = () => {
@@ -10,7 +10,7 @@ const Header = () => {
   }
 
   return (
-    <header>
+    <header className='backdrop-blur-md'>
       <div className="header-desktop mobile-hidden">
         <div className="logo">
           <img src={logo} width={50} alt="Mans Urja Logo" />

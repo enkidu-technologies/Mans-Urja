@@ -1,63 +1,53 @@
-import React from 'react'
-import { GrConnect } from 'react-icons/gr'
-import { RiInstallLine } from 'react-icons/ri'
-import { MdAppRegistration, MdApproval } from 'react-icons/md'
-import { CiSettings } from 'react-icons/ci'
-import { FaChargingStation } from 'react-icons/fa'
-import { SiCodeblocks } from 'react-icons/si'
+import React from 'react';
+import { GrConnect } from 'react-icons/gr';
+import { RiInstallLine } from 'react-icons/ri';
+import { MdAppRegistration, MdApproval } from 'react-icons/md';
+import { CiSettings } from 'react-icons/ci';
+import { FaChargingStation } from 'react-icons/fa';
+import { SiCodeblocks } from 'react-icons/si';
+
+const ServiceCard = ({ Icon, title }) => (
+    <div className='flex flex-col items-center bg-white p-6 rounded-xl shadow hover:shadow-lg transition duration-300 text-center'>
+        <Icon className='text-4xl text-green-600 mb-4' />
+        <h4 className='text-lg font-semibold text-gray-700'>{title}</h4>
+    </div>
+);
 
 const OurServices = () => {
     return (
-        <div className='our-services'>
-            <h2 className='text-center text-4xl font-bold my-4'>Our Services</h2>
+        <section className='our-services bg-gray-50 py-16 px-6 md:px-16'>
+            <h2 className='text-4xl font-bold text-center text-gray-800 mb-12'>Our Services</h2>
 
-            <h3 className='services-heading font-bold text-2xl'>UPPTCL/UPPCL</h3>
-            <div className="services-list">
-                <div className='services-item'>
-                    <GrConnect className='icon' />
-                    <h4>Connectivity</h4>
-                </div>
-                <div className='services-item'>
-                    <MdApproval className='icon' />
-                    <h4>LTOA Approvals</h4>
-                </div>
-                <div className='services-item'>
-                    <RiInstallLine className='icon' />
-                    <h4>ABT Meter Installation</h4>
-                </div>
-                <div className='services-item'>
-                    <CiSettings className='icon' />
-                    <h4>WBA</h4>
+            {/* UPPTCL/UPPCL */}
+            <div className='mb-12'>
+                <h3 className='text-2xl font-semibold text-green-700 mb-6'>UPPTCL / UPPCL</h3>
+                <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8'>
+                    <ServiceCard Icon={GrConnect} title="Connectivity" />
+                    <ServiceCard Icon={MdApproval} title="LTOA Approvals" />
+                    <ServiceCard Icon={RiInstallLine} title="ABT Meter Installation" />
+                    <ServiceCard Icon={CiSettings} title="WBA" />
                 </div>
             </div>
 
-            <h3 className='services-heading font-bold text-2xl'>Electrical Safety</h3>
-            <div className="services-list">
-                <div className='services-item'>
-                    <MdAppRegistration className='icon' />
-                    <h4>Drawing Approval</h4>
-                </div>
-                <div className='services-item'>
-                    <MdApproval className='icon' />
-                    <h4>CEIG Approval</h4>
+            {/* Electrical Safety */}
+            <div className='mb-12'>
+                <h3 className='text-2xl font-semibold text-green-700 mb-6'>Electrical Safety</h3>
+                <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8'>
+                    <ServiceCard Icon={MdAppRegistration} title="Drawing Approval" />
+                    <ServiceCard Icon={MdApproval} title="CEIG Approval" />
                 </div>
             </div>
 
-            <h3 className='services-heading font-bold text-2xl'>SLDC</h3>
-            <div className="services-list">
-                <div className='services-item'>
-                    <FaChargingStation className='icon' />
-                    <h4>New Elements Charging</h4>
-                </div>
-                <div className='services-item'>
-                    <SiCodeblocks className='icon' />
-                    <h4>C.O.D.</h4>
+            {/* SLDC */}
+            <div>
+                <h3 className='text-2xl font-semibold text-green-700 mb-6'>SLDC</h3>
+                <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8'>
+                    <ServiceCard Icon={FaChargingStation} title="New Elements Charging" />
+                    <ServiceCard Icon={SiCodeblocks} title="C.O.D." />
                 </div>
             </div>
+        </section>
+    );
+};
 
-
-        </div>
-    )
-}
-
-export default OurServices
+export default OurServices;
