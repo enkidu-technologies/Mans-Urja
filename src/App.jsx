@@ -8,6 +8,8 @@ import Contact from './pages/Contact'
 import Header from './ui/Header'
 import Footer from './ui/Footer'
 import NotFound from './pages/NotFound'
+import AbtMeter from './products/AbtMeter'
+import Ctpt from './products/Ctpt'
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
         <Route path='/services' element={<Services />} />
         <Route path='/products' element={<Products />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/abt-meter' element={<AbtMeter />} />
+        <Route path='/ct-pt' element={<Ctpt />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />

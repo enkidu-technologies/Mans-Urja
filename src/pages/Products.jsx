@@ -9,11 +9,13 @@ const products = [
     title: 'ABT Meter',
     image: abt,
     description: 'Accurate metering solutions for open access and grid-connected consumers, ensuring seamless energy monitoring and compliance.',
+    url: '/abt-meter',
   },
   {
     title: 'CT & PT',
     image: ctpt,
     description: 'Reliable Current and Potential Transformers that ensure safe, stable, and precise power measurement.',
+    url: '/ct-pt',
   },
 ];
 
@@ -39,7 +41,7 @@ const Products = () => {
               <h3 className="text-2xl font-semibold mb-3">{product.title}</h3>
               <p className="text-gray-600 text-sm mb-4">{product.description}</p>
               <a
-                href="#"
+                href={product.url}
                 className="btn"
               >
                 View More

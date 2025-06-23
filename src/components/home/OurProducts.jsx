@@ -26,9 +26,9 @@ const OurProducts = () => {
                         <p className='text-gray-600 mb-4 sm:mb-6 text-xs sm:text-sm md:text-base leading-relaxed px-2'>
                             Precision-engineered ABT meters for energy monitoring in industrial and commercial sectors.
                         </p>
-                        <button className='bg-green-600 hover:bg-green-700 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 md:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg text-sm sm:text-base'>
+                        <a href='abt-meter' className='btn'>
                             View More
-                        </button>
+                        </a>
                     </div>
 
                     {/* CT & PT */}
@@ -46,9 +46,9 @@ const OurProducts = () => {
                         <p className='text-gray-600 mb-4 sm:mb-6 text-xs sm:text-sm md:text-base leading-relaxed px-2'>
                             Reliable and safe Current and Potential Transformers for all voltage class needs.
                         </p>
-                        <button className='bg-green-600 hover:bg-green-700 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 md:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg text-sm sm:text-base'>
+                        <a href='/ct-pt' className='btn'>
                             View More
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
