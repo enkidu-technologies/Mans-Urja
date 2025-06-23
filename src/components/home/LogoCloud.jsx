@@ -24,7 +24,7 @@ const LogoCloud = () => {
                     {logos.map((logo, index) => (
                         <div 
                             key={index} 
-                            className="w-full flex justify-center items-center p-2 sm:p-3 sm:grayscale hover:grayscale-0 transition duration-300 ease-in-out"
+                            className="w-full flex justify-center items-center p-2 sm:p-3 hover:scale-110 transition duration-300 ease-in-out"
                         >
                             <img
                                 src={logo}

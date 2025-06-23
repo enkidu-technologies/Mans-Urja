@@ -53,6 +53,7 @@ const Contact = () => {
               <div>
                 <h3 className="text-md font-semibold mb-1">Email</h3>
                 <p className="text-green-600 font-medium">sales@mansurja.com</p>
+                <p className="text-green-600 font-medium">info@mansurja.in</p>
               </div>
             </div>
 
@@ -61,7 +62,7 @@ const Contact = () => {
               <IoTimeSharp className="text-2xl text-green-600 mt-1" />
               <div>
                 <h3 className="text-md font-semibold mb-1">Working Hours</h3>
-                <p>Mon - Sat: 9:00 AM – 6:00 PM</p>
+                <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
                 <p>Sunday: Closed</p>
               </div>
             </div>

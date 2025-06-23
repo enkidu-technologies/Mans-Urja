@@ -69,14 +69,12 @@ const Footer = () => {
           {/* Useful Links */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white mb-4 relative">
-              Useful Links
+              Our Products
               <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400"></div>
             </h3>
             <ul className="space-y-3">
-              <li><a href="" className="text-slate-300 hover:text-orange-400 transition-colors duration-300 text-sm">Solar Calculator</a></li>
-              <li><a href="" className="text-slate-300 hover:text-orange-400 transition-colors duration-300 text-sm">Energy Savings</a></li>
-              <li><a href="" className="text-slate-300 hover:text-orange-400 transition-colors duration-300 text-sm">Maintenance Guide</a></li>
-              <li><a href="" className="text-slate-300 hover:text-orange-400 transition-colors duration-300 text-sm">Support Center</a></li>
+              <li><a href="/abt-meter" className="text-slate-300 hover:text-orange-400 transition-colors duration-300 text-sm">ABT Meter</a></li>
+              <li><a href="/ct-pt" className="text-slate-300 hover:text-orange-400 transition-colors duration-300 text-sm">CT & PT</a></li>
             </ul>
           </div>
         </div>
@@ -91,9 +89,9 @@ const Footer = () => {
             </p>
             <p className="text-slate-400 text-sm text-center sm:text-right">
               Site Developed by{' '}
-              <span className="text-orange-400 hover:text-orange-300 transition-colors duration-300 font-medium">
+              <a href='https://enkidu.in' target='_blank' className="text-orange-400 hover:text-orange-300 transition-colors duration-300 font-medium">
                 Enkidu Technologies Pvt. Ltd.
-              </span>
+              </a>
             </p>
           </div>
         </div>
