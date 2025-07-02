@@ -23,15 +23,11 @@ const Contact = () => {
                 <div className="space-y-2 text-sm">
                   <div>
                     <h4 className="font-bold">Registered Office:</h4>
-                    <p>H No. 12, First floor, Vill. Adhichini, New Delhi North East DL - 110017</p>
+                    <p>Shop no. - F46 First Floor, Tower 17, River Heights, Raj Nagar Extension, Ghaziabad, Uttar Pradesh 201017</p>
                   </div>
                   <div>
                     <h4 className="font-bold">Corporate Office:</h4>
-                    <p>B 97, 1st floor, Vibhuti Khand near UPNEDA, Gomti Nagar, Lucknow - 226010</p>
-                  </div>
-                  <div>
-                    <h4 className="font-bold">Branch Office:</h4>
-                    <p>Bokta Chowk, Piprouli Road, Plot no. AL 6/A, Sec-13, Gida, Gorakhpur - 273209</p>
+                    <p>SVN/066-B/016, Kanpur Road, Shivam Nagar, Lucknow, Uttar Pradesh 226023</p>
                   </div>
                 </div>
               </div>
@@ -42,7 +38,8 @@ const Contact = () => {
               <MdPhone className="text-2xl text-green-600 mt-1" />
               <div>
                 <h3 className="text-md font-semibold mb-1">Phone</h3>
-                <p className="text-green-600 font-medium">+91 95173 56969</p>
+                {/* <p className="text-green-600 font-medium">+91 95173 56969</p> */}
+                <p className="text-green-600 font-medium">+91 83181 78822</p>
                 <p className="text-green-600 font-medium">+91 83686 44748</p>
               </div>
             </div>
