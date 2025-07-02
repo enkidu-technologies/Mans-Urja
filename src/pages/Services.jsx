@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 
 import { GrConnect } from 'react-icons/gr';
 import { RiInstallLine } from 'react-icons/ri';
@@ -7,42 +7,129 @@ import { MdAppRegistration, MdApproval } from 'react-icons/md';
 import { CiSettings } from 'react-icons/ci';
 import { FaChargingStation } from 'react-icons/fa';
 import { SiCodeblocks } from 'react-icons/si';
+import { MdOutlineLandscape } from 'react-icons/md';
+import { FaLandmark } from 'react-icons/fa6';
 
-const services = [
-  {
-    category: 'UPPTCL / UPPCL',
-    items: [
-      { icon: GrConnect, title: 'Connectivity', desc: 'Facilitating new connections and grid integration with UPPTCL/UPPCL.' },
-      { icon: MdApproval, title: 'LTOA Approvals', desc: 'Obtaining Long-Term Open Access approvals for large-scale power usage.' },
-      { icon: RiInstallLine, title: 'ABT Meter Installation', desc: 'Advanced metering infrastructure for accurate energy monitoring.' },
-      { icon: CiSettings, title: 'WBA', desc: 'Wheeling & Banking Agreement setup and support.' },
-    ],
-  },
-  {
-    category: 'Electrical Safety',
-    items: [
-      { icon: MdAppRegistration, title: 'Drawing Approval', desc: 'Technical drawing approval from electrical safety authorities.' },
-      { icon: MdApproval, title: 'CEIG Approval', desc: 'Ensuring compliance with Chief Electrical Inspector standards.' },
-    ],
-  },
-  {
-    category: 'SLDC',
-    items: [
-      { icon: FaChargingStation, title: 'New Elements Charging', desc: 'Registering new transmission or distribution elements with SLDC.' },
-      { icon: SiCodeblocks, title: 'C.O.D.', desc: 'Commercial Operation Declaration processing and approval.' },
-    ],
-  },
-];
+
+const allServices = {
+  'Uttar Pradesh': [
+    {
+      category: 'UPPTCL / UPPCL',
+      items: [
+        { icon: GrConnect, title: 'Connectivity', desc: 'Grid integration for UPPTCL/UPPCL.' },
+        { icon: MdOutlineLandscape, title: 'LAND', desc: 'Support in land acquisition, documentation, and approvals for setting up renewable energy projects.' },
+        { icon: MdApproval, title: 'LTOA Approvals', desc: 'Long-Term Open Access for industries.' },
+        { icon: RiInstallLine, title: 'ABT Meter Installation', desc: 'Install ABT meters with accuracy.' },
+        { icon: CiSettings, title: 'WBA', desc: 'Wheeling and Banking Agreements.' },
+      ],
+    },
+    {
+      category: 'Electrical Safety',
+      items: [
+        { icon: MdAppRegistration, title: 'Drawing Approval', desc: 'Drawing approval process from authorities.' },
+        { icon: MdApproval, title: 'CEIG Approval', desc: 'Chief Electrical Inspector compliance.' },
+      ],
+    },
+    {
+      category: 'SLDC',
+      items: [
+        { icon: FaChargingStation, title: 'New Elements Charging', desc: 'New grid element registration.' },
+        { icon: SiCodeblocks, title: 'C.O.D.', desc: 'Commercial Operation Declaration.' },
+      ],
+    },
+  ],
+
+  'Haryana': [
+    {
+      category: 'HVPN / UHBVN / DHBVN',
+      items: [
+        { icon: MdAppRegistration, title: 'SPV Registration', desc: 'Registration of Solar Power Projects (SPV) with the concerned authorities for compliance and recognition.' },
+        { icon: GrConnect, title: 'Connectivity', desc: 'Grid integration for UPPTCL/UPPCL.' },
+        { icon: MdOutlineLandscape, title: 'LAND', desc: 'Support in land acquisition, documentation, and approvals for setting up renewable energy projects.' },
+        { icon: MdApproval, title: 'LTOA Approvals', desc: 'Long-Term Open Access for industries.' },
+        { icon: RiInstallLine, title: 'ABT Meter Installation', desc: 'Install ABT meters with accuracy.' },
+        { icon: FaLandmark, title: 'Banking', desc: 'Assistance with Banking arrangements under state energy policies to utilize surplus generated power effectively.' },
+      ],
+    },
+    {
+      category: 'Electrical Safety & CEIG',
+      items: [
+        { icon: MdAppRegistration, title: 'Drawing Approval', desc: 'Drawing approval process from authorities.' },
+        { icon: MdApproval, title: 'CEIG Approval', desc: 'Chief Electrical Inspector compliance.' },
+      ],
+    },
+    {
+      category: 'SLDC',
+      items: [
+        { icon: FaChargingStation, title: 'New Elements Charging', desc: 'New grid element registration.' },
+        { icon: SiCodeblocks, title: 'C.O.D.', desc: 'Commercial Operation Declaration.' },
+      ],
+    },
+  ],
+
+  'Uttarakhand': [
+    {
+      category: 'UPCL / SLDC-UK',
+      items: [
+        { icon: MdAppRegistration, title: 'SPV Registration', desc: 'Registration of Solar Power Projects (SPV) with the concerned authorities for compliance and recognition.' },
+        { icon: GrConnect, title: 'Connectivity', desc: 'Grid integration for UPPTCL/UPPCL.' },
+        { icon: MdOutlineLandscape, title: 'LAND', desc: 'Support in land acquisition, documentation, and approvals for setting up renewable energy projects.' },
+        { icon: MdApproval, title: 'LTOA Approvals', desc: 'Long-Term Open Access for industries.' },
+        { icon: RiInstallLine, title: 'ABT Meter Installation', desc: 'Install ABT meters with accuracy.' },
+        { icon: FaLandmark, title: 'Banking', desc: 'Assistance with Banking arrangements under state energy policies to utilize surplus generated power effectively.' },
+      ],
+    },
+    {
+      category: 'Electrical Safety & CEIG',
+      items: [
+        { icon: MdAppRegistration, title: 'Drawing Approval', desc: 'Drawing approval process from authorities.' },
+        { icon: MdApproval, title: 'CEIG Approval', desc: 'Chief Electrical Inspector compliance.' },
+      ],
+    },
+    {
+      category: 'SLDC',
+      items: [
+        { icon: FaChargingStation, title: 'New Elements Charging', desc: 'New grid element registration.' },
+        { icon: SiCodeblocks, title: 'C.O.D.', desc: 'Commercial Operation Declaration.' },
+      ],
+    },
+  ],
+};
+
+const tabs = Object.keys(allServices);
 
 const Services = () => {
+  const [activeTab, setActiveTab] = useState('Uttar Pradesh');
+  const services = allServices[activeTab];
+
   return (
     <section className="services-page py-16 px-6 md:px-20 bg-white text-gray-800">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-12 text-green-800">Our Services</h1>
+        <h1 className="text-4xl font-bold text-center mb-8 text-green-800">Our Services</h1>
 
+        {/* Tabs */}
+        <div className="flex justify-center mb-10 space-x-4 flex-wrap">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-6 py-2 rounded-full border-2 text-sm font-semibold transition-all duration-200 ${
+                activeTab === tab
+                  ? 'bg-green-600 text-white border-green-600'
+                  : 'bg-white text-green-600 border-green-400 hover:bg-green-50'
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
+        {/* Content */}
         {services.map((section, idx) => (
           <div key={idx} className="mb-16">
-            <h2 className="text-2xl font-semibold text-green-700 mb-6 border-l-4 border-green-600 pl-3">{section.category}</h2>
+            <h2 className="text-2xl font-semibold text-green-700 mb-6 border-l-4 border-green-600 pl-3">
+              {section.category}
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
               {section.items.map((service, index) => (
                 <div

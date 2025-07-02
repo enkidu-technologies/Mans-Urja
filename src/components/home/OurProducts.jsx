@@ -1,6 +1,7 @@
 import React from 'react';
 import abt from "../../assets/imgs/abt.webp";
 import ctpt from "../../assets/imgs/ct&pt.jpg";
+import amr from "../../assets/imgs/amr_modem.png";
 
 const OurProducts = () => {
     return (
@@ -10,7 +11,7 @@ const OurProducts = () => {
                     Our Products
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 justify-items-center">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12 justify-items-center">
                     {/* ABT Meter */}
                     <div className='bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 w-full max-w-sm lg:max-w-md hover:scale-105 group border border-gray-100'>
                         <div className='w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-44 lg:h-44 mx-auto mb-4 sm:mb-6 overflow-hidden'>
@@ -47,6 +48,26 @@ const OurProducts = () => {
                             Reliable and safe Current and Potential Transformers for all voltage class needs.
                         </p>
                         <a href='/ct-pt' className='btn'>
+                            View More
+                        </a>
+                    </div>
+
+                    {/* AMR Modem */}
+                    <div className='bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 w-full max-w-sm lg:max-w-md hover:scale-105 group border border-gray-100'>
+                        <div className='w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-44 lg:h-44 mx-auto mb-4 sm:mb-6 overflow-hidden'>
+                            <img 
+                                src={amr} 
+                                alt="CT & PT" 
+                                className='w-full h-full object-cover rounded-full border-4 border-green-500 shadow-lg group-hover:border-green-600 transition-colors duration-300' 
+                            />
+                        </div>
+                        <h3 className='text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-2 sm:mb-3 group-hover:text-green-600 transition-colors duration-300'>
+                            AMR Modem
+                        </h3>
+                        <p className='text-gray-600 mb-4 sm:mb-6 text-xs sm:text-sm md:text-base leading-relaxed px-2'>
+                            Smart meter reader for DLMS-compliant meters via optical/RS232/RJ11.
+                        </p>
+                        <a href='/amr' className='btn'>
                             View More
                         </a>
                     </div>

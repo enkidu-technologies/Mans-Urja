@@ -10,6 +10,7 @@ import Footer from './ui/Footer'
 import NotFound from './pages/NotFound'
 import AbtMeter from './products/AbtMeter'
 import Ctpt from './products/Ctpt'
+import AmrModem from './products/AmrModem'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path='/contact' element={<Contact />} />
         <Route path='/abt-meter' element={<AbtMeter />} />
         <Route path='/ct-pt' element={<Ctpt />} />
+        <Route path='/amr' element={<AmrModem />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />

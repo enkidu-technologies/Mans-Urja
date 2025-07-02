@@ -3,6 +3,7 @@ import React from 'react';
 
 import abt from '../assets/imgs/abt.webp';
 import ctpt from '../assets/imgs/ct&pt.jpg';
+import amr from '../assets/imgs/amr_modem.png';
 
 const products = [
   {
@@ -16,6 +17,12 @@ const products = [
     image: ctpt,
     description: 'Reliable Current and Potential Transformers that ensure safe, stable, and precise power measurement.',
     url: '/ct-pt',
+  },
+  {
+    title: 'AMR Modem',
+    image: amr,
+    description: 'AMR GPRS Modem enables smart reading of any DLMS IEC 62056-21 compliant energy meter via optical, RS232, or RJ11 ports.',
+    url: '/amr',
   },
 ];
 

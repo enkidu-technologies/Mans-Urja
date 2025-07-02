@@ -5,7 +5,7 @@ import { FaXTwitter } from 'react-icons/fa6'
 
 const Footer = () => {
   return (
-    <footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white mt-16'>
+    <footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white'>
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -75,6 +75,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><a href="/abt-meter" className="text-slate-300 hover:text-orange-400 transition-colors duration-300 text-sm">ABT Meter</a></li>
               <li><a href="/ct-pt" className="text-slate-300 hover:text-orange-400 transition-colors duration-300 text-sm">CT & PT</a></li>
+              <li><a href="/amr" className="text-slate-300 hover:text-orange-400 transition-colors duration-300 text-sm">AMR Modem</a></li>
             </ul>
           </div>
         </div>
