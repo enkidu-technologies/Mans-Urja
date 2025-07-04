@@ -9,7 +9,7 @@ import logo5 from '../../assets/clients/5.png';
 import logo6 from '../../assets/clients/6.png';
 import logo7 from '../../assets/clients/7.png';
 import logo8 from '../../assets/clients/8.png';
-import logo9 from '../../assets/clients/9.png';
+import logo9 from '../../assets/clients/9.jpg';
 import logo10 from '../../assets/clients/10.png';
 import logo11 from '../../assets/clients/11.png';
 import logo12 from '../../assets/clients/12.png';
