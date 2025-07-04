@@ -78,11 +78,6 @@ npm run build
 
 ---
 
-## 📷 Screenshots
-
-> *Add screenshots here if available for visual reference.*
-
----
 
 ## 🌐 Deployment
 
