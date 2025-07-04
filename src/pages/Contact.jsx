@@ -23,11 +23,11 @@ const Contact = () => {
                 <div className="space-y-2 text-sm">
                   <div>
                     <h4 className="font-bold">Registered Office:</h4>
-                    <p>Shop no. - F46 First Floor, Tower 17, River Heights, Raj Nagar Extension, Ghaziabad, Uttar Pradesh 201017</p>
+                    <p>H No. 12, First Floor Vill Adhichini, New Delhi, North East DL 110017</p>
                   </div>
                   <div>
                     <h4 className="font-bold">Corporate Office:</h4>
-                    <p>SVN/066-B/016, Kanpur Road, Shivam Nagar, Lucknow, Uttar Pradesh 226023</p>
+                    <p>FF-46 River Heights Regalia, Rajnagar Extn, Ghaziabad 201017</p>
                   </div>
                 </div>
               </div>
