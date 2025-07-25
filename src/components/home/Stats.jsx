@@ -1,4 +1,3 @@
-import React from 'react';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import pic2 from "../../assets/imgs/pic2.jpg";

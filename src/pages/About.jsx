@@ -1,6 +1,3 @@
-'use client';
-import React from 'react';
-
 const About = () => {
   return (
     <section className="about-page py-16 px-6 md:px-20 bg-white text-gray-800">
@@ -26,7 +23,7 @@ const About = () => {
           <div className="p-6 border-l-4 border-green-600 bg-gray-50 rounded shadow">
             <h2 className="text-2xl font-semibold mb-4">Our Vision</h2>
             <p className="text-gray-600">
-              To be India’s most trusted name in power consultancy by enabling smarter energy choices and advancing a greener tomorrow.
+              To be India's most trusted name in power consultancy by enabling smarter energy choices and advancing a greener tomorrow.
             </p>
           </div>
         </div>

@@ -1,12 +1,9 @@
-'use client';
-import React from 'react';
-
 import abt from '../assets/imgs/abt.webp';
 import ctpt from '../assets/imgs/ct&pt.jpg';
 import amr from '../assets/imgs/amr_modem.png';
 
 const products = [
-  {
+  { 
     title: 'ABT Meter',
     image: abt,
     description: 'Accurate metering solutions for open access and grid-connected consumers, ensuring seamless energy monitoring and compliance.',

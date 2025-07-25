@@ -1,4 +1,3 @@
-import React from 'react';
 import { GrConnect } from 'react-icons/gr';
 import { RiInstallLine } from 'react-icons/ri';
 import { MdAppRegistration, MdApproval } from 'react-icons/md';

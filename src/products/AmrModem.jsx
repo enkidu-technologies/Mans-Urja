@@ -1,5 +1,3 @@
-import React from 'react';
-
 import amr from "../assets/imgs/amr_modem.png";
 
 const AMRModemProduct = () => {

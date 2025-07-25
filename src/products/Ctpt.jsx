@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import img from "../assets/imgs/ct&pt.jpg"
 
 const Ctpt = () => {

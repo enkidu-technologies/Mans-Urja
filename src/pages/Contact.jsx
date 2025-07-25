@@ -1,5 +1,3 @@
-'use client';
-import React from 'react';
 import { MdLocationOn, MdEmail, MdPhone } from 'react-icons/md';
 import { IoTimeSharp } from 'react-icons/io5';
 

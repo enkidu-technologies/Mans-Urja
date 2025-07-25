@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import vid1 from "../../assets/vids/video1.mp4";
 
 const Hero = () => {

@@ -26,24 +26,43 @@ const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, lo
     logo11, logo12, logo13, logo14, logo15, logo16, logo17, logo18, logo19, logo20];
 
 const ClientMarquee = () => {
-    return (
-        <div className="bg-gray-100 py-12">
-            <h2 className="text-3xl font-bold text-center text-gray-700 mb-8">Our Esteemed Clients</h2>
+  // Split logos into rows: 4 - 3 - 4 - 3
+  const rowPattern = [4, 3, 4, 3];
+  let currentIndex = 0;
+  const rows = rowPattern.map((count) => {
+    const row = logos.slice(currentIndex, currentIndex + count);
+    currentIndex += count;
+    return row;
+  });
 
-            <div className="overflow-hidden relative">
-                <div className="flex animate-marquee space-x-16 w-max">
-                    {logos.concat(logos).map((logo, index) => (
-                        <img
-                            key={index}
-                            src={logo}
-                            alt={`logo-${index}`}
-                            className="h-16 w-auto object-contain"
-                        />
-                    ))}
-                </div>
-            </div>
-        </div>
-    );
+  return (
+    <div className="bg-gray-100 py-12">
+      <h2 className="text-3xl font-bold text-center text-gray-700 mb-8">
+        Our Esteemed Clients
+      </h2>
+
+      <div className="space-y-6 px-4 max-w-6xl mx-auto">
+        {rows.map((row, i) => (
+          <div
+            key={i}
+            className={`flex justify-center gap-6 flex-wrap ${
+              row.length === 3 ? "justify-evenly" : "justify-between"
+            }`}
+          >
+            {row.map((logo, j) => (
+              <img
+                key={j}
+                src={logo}
+                alt={`logo-${i}-${j}`}
+                className="h-16 w-auto object-contain"
+              />
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
+
 
 export default ClientMarquee;

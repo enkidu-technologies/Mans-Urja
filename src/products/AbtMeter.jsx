@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const AbtMeter = () => {
   const [activeTab, setActiveTab] = useState('specifications');
@@ -144,7 +144,7 @@ const AbtMeter = () => {
                     </div>
                     <div className="flex justify-between py-3 border-b border-gray-100">
                       <span className="font-medium text-gray-700">Accuracy Class</span>
-                      <span className="text-gray-900 font-bold text-green-600">0.2s</span>
+                      <span className="font-bold text-green-600">0.2s</span>
                     </div>
                     <div className="flex justify-between py-3 border-b border-gray-100">
                       <span className="font-medium text-gray-700">Usage/Application</span>

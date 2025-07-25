@@ -1,4 +1,3 @@
-import React from 'react';
 import abt from "../../assets/imgs/abt.webp";
 import ctpt from "../../assets/imgs/ct&pt.jpg";
 import amr from "../../assets/imgs/amr_modem.png";

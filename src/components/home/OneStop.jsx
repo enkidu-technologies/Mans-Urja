@@ -1,4 +1,3 @@
-import React from 'react'
 import { BiSupport } from 'react-icons/bi'
 import { MdMiscellaneousServices, MdOutlineWorkOutline } from 'react-icons/md'
 
