@@ -14,9 +14,9 @@ const Home = () => {
       <OneStop/>
       <Stats/>
       <OurProducts/>
-      <ClientMarquee/>
+      <ClientMarquee/> {/* Clients */}
+      <LogoCloud/> {/* Developers */}
       <OurServices/>
-      <LogoCloud/>
     </div>
   )
 }
