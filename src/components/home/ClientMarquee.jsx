@@ -1,33 +1,29 @@
-'use client';
-import React from 'react';
+// Dynamically import all assets from the clients folder
+const logoImports = import.meta.glob('../../assets/clients/Asset *.{png,jpg,jpeg,svg}', { eager: true });
 
-import logo1 from '../../assets/clients/1.png';
-import logo2 from '../../assets/clients/2.png';
-import logo3 from '../../assets/clients/3.png';
-import logo4 from '../../assets/clients/4.png';
-import logo5 from '../../assets/clients/5.png';
-import logo6 from '../../assets/clients/6.png';
-import logo7 from '../../assets/clients/7.png';
-import logo8 from '../../assets/clients/8.png';
-import logo9 from '../../assets/clients/9.jpg';
-import logo10 from '../../assets/clients/10.png';
-import logo11 from '../../assets/clients/11.png';
-import logo12 from '../../assets/clients/12.png';
-import logo13 from '../../assets/clients/13.png';
-import logo14 from '../../assets/clients/14.png';
-import logo15 from '../../assets/clients/15.png';
-import logo16 from '../../assets/clients/16.png';
-import logo17 from '../../assets/clients/17.png';
-import logo18 from '../../assets/clients/18.png';
-import logo19 from '../../assets/clients/19.png';
-import logo20 from '../../assets/clients/20.png';
-
-const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10,
-    logo11, logo12, logo13, logo14, logo15, logo16, logo17, logo18, logo19, logo20];
+// Sort by number in filename
+const logos = Object.entries(logoImports)
+  .sort((a, b) => {
+    const numA = parseInt(a[0].match(/Asset\s(\d+)/)[1]);
+    const numB = parseInt(b[0].match(/Asset\s(\d+)/)[1]);
+    return numA - numB;
+  })
+  .map(([, mod]) => mod.default);
 
 const ClientMarquee = () => {
-  // Split logos into rows: 4 - 3 - 4 - 3
-  const rowPattern = [4, 3, 4, 3];
+  // Generate row pattern dynamically: alternating 5 and 4 logos per row
+  const rowPattern = [];
+  let remaining = logos.length;
+  let toggle = true;
+
+  while (remaining > 0) {
+    const count = toggle ? 5 : 4;
+    rowPattern.push(Math.min(count, remaining));
+    remaining -= count;
+    toggle = !toggle;
+  }
+
+  // Slice logos according to the rowPattern
   let currentIndex = 0;
   const rows = rowPattern.map((count) => {
     const row = logos.slice(currentIndex, currentIndex + count);
@@ -41,21 +37,23 @@ const ClientMarquee = () => {
         Our Esteemed Clients
       </h2>
 
-      <div className="space-y-6 px-4 max-w-6xl mx-auto">
+      <div className="space-y-8 px-4 max-w-6xl mx-auto">
         {rows.map((row, i) => (
           <div
             key={i}
-            className={`flex justify-center gap-6 flex-wrap ${
-              row.length === 3 ? "justify-evenly" : "justify-between"
-            }`}
+            className={`flex flex-wrap justify-center gap-x-10 gap-y-8`}
           >
             {row.map((logo, j) => (
-              <img
+              <div
                 key={j}
-                src={logo}
-                alt={`logo-${i}-${j}`}
-                className="h-16 w-auto object-contain"
-              />
+                className="w-32 h-20 flex items-center justify-center"
+              >
+                <img
+                  src={logo}
+                  alt={`logo-${i}-${j}`}
+                  className="w-full h-full object-contain"
+                />
+              </div>
             ))}
           </div>
         ))}
@@ -63,6 +61,5 @@ const ClientMarquee = () => {
     </div>
   );
 };
-
 
 export default ClientMarquee;
